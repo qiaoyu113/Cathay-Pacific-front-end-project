@@ -13,6 +13,6 @@
         "@components/*": ["src/components/*"]
       }
     },
-    "include": ["src"]
+    "include": ["src", "../backend/src/controllers/loginController.ts"]
   }
   

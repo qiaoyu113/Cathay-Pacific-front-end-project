@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // 引入 useNavigate
 import api from "../utils/api"; // 引入自定义的 api 实例
 import "../styles/LoginPage.css";
 
@@ -18,7 +19,7 @@ const LoginPage: React.FC = () => {
       localStorage.setItem("token", response.data.token);
 
       alert("Login successful!");
-      window.location.href = "/protected"; // 重定向到受保护页面
+      window.location.href = "/";
     } catch (err: any) {
       setError(err.response?.data?.message || "Login failed. Please try again.");
     }
